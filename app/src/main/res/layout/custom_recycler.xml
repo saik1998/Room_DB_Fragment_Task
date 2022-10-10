@@ -5,21 +5,14 @@
     android:background="@drawable/rectangle"
     android:layout_height="wrap_content">
 
-    <TextView android:id="@+id/tvFirstName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:textColor="#000000"
-        android:textSize="22sp"
-        android:textStyle="bold"
+    <TextView
+        android:id="@+id/tvFirstName"
+        style="@style/Recycler_Text_view"
         />
 
-    <TextView android:id="@+id/tvLastName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:textColor="#000000"
-        android:textSize="22sp"
+    <TextView
+        android:id="@+id/tvLastName"
+        style="@style/Recycler_Text_view"
         />
 
 </LinearLayout>

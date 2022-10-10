@@ -10,5 +10,9 @@
 
     <string name="save">Save</string>
 
+    <string name="enter">Enter the data here</string>
+    <string name="enter_data">Your Data</string>
+
+
 
 </resources>

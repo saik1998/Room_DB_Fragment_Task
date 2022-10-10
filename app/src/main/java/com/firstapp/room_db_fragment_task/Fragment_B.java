@@ -26,7 +26,7 @@ import java.util.List;
  */
 public class Fragment_B extends Fragment {
 
-    RecyclerView recyclerView;
+    public static RecyclerView recyclerView;
     UserListAdapter userListAdapter;
 
     public Fragment_B() {
@@ -46,8 +46,8 @@ public class Fragment_B extends Fragment {
         //it divides both horizental and vertical
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(dividerItemDecoration);
-        userListAdapter = new UserListAdapter(getContext());
-        recyclerView.setAdapter(userListAdapter);
+//        userListAdapter = new UserListAdapter(getContext());
+//        recyclerView.setAdapter(userListAdapter);
 
         loadUserList();
 
@@ -55,10 +55,15 @@ public class Fragment_B extends Fragment {
     }
 
     //load the data
-    private void loadUserList() {
+    public void loadUserList() {
+
+
         AppDatabase db = AppDatabase.getDbInstance(this.getContext());
         List<User> userList =db.userDao().getAllUsers();
+        userListAdapter = new UserListAdapter(getContext());
         userListAdapter.setUserList(userList);
+        recyclerView.setAdapter(userListAdapter);
+
     }
 
 
